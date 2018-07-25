@@ -1,4 +1,4 @@
-from kicker_data import get_kicker_data, get_kicker_data_with_date
+from kicker_data import get_kicker_data
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import GridSearchCV
 from sklearn.metrics import accuracy_score
