@@ -1,11 +1,9 @@
-from kicker_data import get_kicker_data
+from data.kicker_data import get_kicker_split_data
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import GridSearchCV
 from sklearn.metrics import accuracy_score
 
-print('Random Forest')
-
-X_train, X_test, y_train, y_test = get_kicker_data()
+X_train, X_test, y_train, y_test = get_kicker_split_data()
 
 rf = RandomForestClassifier(1000, max_depth=4, max_features=40)
 rf.fit(X_train, y_train)

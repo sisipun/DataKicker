@@ -1,11 +1,9 @@
-from kicker_data import get_kicker_data
+from data.kicker_data import get_kicker_split_data
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.model_selection import GridSearchCV
 from sklearn.metrics import accuracy_score
 
-print('KNN')
-
-X_train, X_test, y_train, y_test = get_kicker_data()
+X_train, X_test, y_train, y_test = get_kicker_split_data()
 
 knn = KNeighborsClassifier(n_neighbors=15)
 knn.fit(X_train, y_train)
