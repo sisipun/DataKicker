@@ -1,12 +1,11 @@
 import pandas as pd
 import numpy as np
 from sklearn.model_selection import train_test_split
-
-PLAYERS_COUNT = 28
+from util.constant import PLAYERS_COUNT
 
 
 def get_kicker_data():
-    df = pd.read_csv('..\data\kicker_with_date.csv')
+    df = pd.read_csv('..\data\kicker_data.csv')
 
     y = df['red_won'].map({True: 1, False: 0})
 
