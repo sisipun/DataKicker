@@ -5,7 +5,7 @@ from util.constant import PLAYERS_COUNT
 
 
 def get_kicker_data():
-    df = pd.read_csv('..\data\kicker_data.csv')
+    df = pd.read_csv('../data/kicker_data.csv')
 
     y = df['red_won'].map({True: 1, False: 0})
 
